@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
 
-export default function oneB() {
+export default function twoA() {
     return (
         <View style={styles.container}>
             <Image

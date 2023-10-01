@@ -9,4 +9,6 @@ import XMEye from './screen/XMEye';
 //export default oneA;
 //export default oneB;
 //export default oneC;
+//export default oneD;
+//export default oneE;
 export default FirstScreen;

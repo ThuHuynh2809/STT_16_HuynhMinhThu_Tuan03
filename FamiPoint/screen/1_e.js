@@ -2,25 +2,45 @@ import { StatusBar } from 'expo-status-bar';
 import { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
 
-export default function oneB() {
+export default function oneE() {
     return (
         <View style={styles.container}>
-            <Image
-                source={require('./Image/lock-152879 1.png')}
-                style={styles.img}
-            />
-            <Text style={styles.text1}>FORGET{'\n'}PASSWORD</Text>
-            <Text style={styles.text2}>Provide your account’s email for which you want to reset your password</Text>
-            <View style={styles.boxEmail}>
-                <View>
-                    <Image source={require('./Image/mail-2935365 1.png')}
-                        style={styles.imgEmail}
-                    />
-                </View>
+            <Text style={styles.text1}>REGISTER</Text>
+            <View style={styles.boxName}>
+                <Text style={styles.txtName}>Name</Text>
             </View>
-            <TouchableOpacity style={styles.btnNext}>
-              <Text style = {styles.textNext}>NEXT</Text>
+            <View style={styles.boxPhone}>
+                <Text style={styles.txtPhone}>Phone</Text>
+            </View>
+
+            <View style={styles.boxEmail}>
+                <Text style={styles.txtEmail}>Email</Text>
+            </View>
+            <View style={styles.boxPass}>
+                <Text style={styles.txtPass}>Password</Text>
+                <Image source={require('./Image/eye 1.png')}
+                    style={styles.imgPass}
+                />
+            </View>
+            <View style={styles.boxBirthday}>
+                <Text style={styles.txtBirthday}>Birthday</Text>
+            </View>
+            <Image 
+                source={require('./Image/rdbFvsM.png')}
+                style={styles.imgrbd}
+            />
+            <Text style={styles.txtMale}>Male</Text>
+            <Image 
+                source={require('./Image/rdbFvsM.png')}
+                style={styles.imgrbd2}
+            />
+            <Text style={styles.txtFemele}>Femele</Text>
+            <TouchableOpacity style={styles.btnRegister}>
+                <Text style={styles.txtRegister}>REGISTER</Text>
             </TouchableOpacity>
+
+            <Text style={styles.text2}>When you agree to terms and conditions</Text>
+
         </View>
     );
 }
@@ -30,20 +50,13 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '360px',
         height: '640px',
-        backgroundImage: 'linear-gradient(#C7F4F6 10%,#D1F4F6 25%,#E5F4F5 90%, #00CCF9 100%)'
-    },
-    img: {
-        width: '104.94px',
-        height: '116.95px',
-        top: '105px',
-        left: '135px',
-        border: '15px',
+        backgroundColor: 'rgba(49, 170, 82, 0.19)'
     },
 
     text1: {
         width: '189px',
         height: '58px',
-        top: '150px',
+        top: '40px',
         left: '95px',
         fontFamily: 'Roboto',
         fontSize: '23.5px',
@@ -53,22 +66,51 @@ const styles = StyleSheet.create({
     },
 
     text2: {
-        width: '302px',
-        height: '53px',
-        top: '190px',
-        left: '45px',
+        width: '260px',
+        height: '20px',
+        top: '130px',
+        left: '60px',
         fontFamilyamily: 'Roboto',
-        fontSize: '16px',
-        fontWeight: '700',
-        lineHeight: '19px',
+        fontSize: '14px',
+        fontWeight: '400',
+        lineHeight: '16.41px',
         textAlign: 'center'
-
     },
-    
+    boxName: {
+        width: '305px',
+        height: '55px',
+        top: '70px',
+        left: '40px',
+        backgroundColor: '#C4C4C4'
+    },
+    txtName: {
+        fontFamily: 'Roboto',
+        fontSize: '20px',
+        textAlign: 'left',
+        padding: '10px',
+        marginTop: '5px',
+        marginLeft: '5px'
+    },
+    boxPhone: {
+        width: '305px',
+        height: '55px',
+        top: '85px',
+        left: '40px',
+        backgroundColor: '#C4C4C4'
+    },
+    txtPhone: {
+        fontFamily: 'Roboto',
+        fontSize: '20px',
+        textAlign: 'left',
+        padding: '10px',
+        marginTop: '5px',
+        marginLeft: '5px'
+    },
+
     boxEmail: {
         width: '305px',
-        height: '45px',
-        top: '210px',
+        height: '55px',
+        top: '100px',
         left: '40px',
         backgroundColor: '#C4C4C4'
     },
@@ -78,34 +120,102 @@ const styles = StyleSheet.create({
         fontSize: '20px',
         textAlign: 'left',
         padding: '10px',
-        marginTop: '-45px',
-        marginLeft: '40px'
+        marginTop: '5px',
+        marginLeft: '5px'
     },
 
-    imgEmail: {
-        width: '48px',
-        height: '45px'
+    boxPass: {
+        width: '305px',
+        height: '55px',
+        top: '115px',
+        left: '40px',
+        backgroundColor: '#C4C4C4'
     },
 
-    btnNext: {
+    txtPass: {
+        fontFamily: 'Roboto',
+        fontSize: '20px',
+        textAlign: 'left',
+        padding: '10px',
+        marginTop: '5px',
+        marginLeft: '5px'
+    },
+
+    imgPass: {
+        width: '38px',
+        height: '36px',
+        top: '-40px',
+        left: '250px'
+    },
+    boxBirthday: {
+        width: '305px',
+        height: '55px',
+        top: '130px',
+        left: '40px',
+        backgroundColor: '#C4C4C4'
+    },
+    txtBirthday: {
+        fontFamily: 'Roboto',
+        fontSize: '20px',
+        textAlign: 'left',
+        padding: '10px',
+        marginTop: '5px',
+        marginLeft: '5px'
+    },
+    imgrbd:{
+        width: '23px',
+        height: '23px',
+        top: '148px',
+        left: '65px'
+    },
+    txtMale:{
+        width: '40px',
+        height: '21px',
+        top: '125px',
+        left: '100px',
+        fontFamilyamily: 'Roboto',
+        fontSize: '18px',
+        fontWeight: '400',
+        lineHeight: '21.09px',
+        textAlign: 'center'
+    },
+    imgrbd2:{
+        width: '23px',
+        height: '23px',
+        top: '104.5px',
+        left: '180px'
+    },
+    txtFemele:{
+        width: '59px',
+        height: '21px',
+        top: '82px',
+        left: '215px',
+        fontFamilyamily: 'Roboto',
+        fontSize: '18px',
+        fontWeight: '400',
+        lineHeight: '21.09px',
+        textAlign: 'center'
+    },
+
+    btnRegister: {
         width: '305px',
         height: '45px',
-        top: '250px',
+        top: '120px',
         left: '40px',
         borderRadius: '10px',
-        backgroundColor: '#E3C000'
+        backgroundColor: '#E53935'
     },
-    textNext: {
-        width: '90px',
-        height: '21px',
+    txtRegister: {
+        width: '150px',
+        height: '23px',
         top: '15px',
         left: 'auto',
         fontFamily: 'Roboto',
-        fontSize: '18px',
+        fontSize: '20px',
         fontWeight: '700',
-        lineHeight: '21.09px',
+        lineHeight: '23.44px',
         textAlign: 'center',
-        color: '#000000',
+        color: '#FFFFFF',
         alignSelf: 'center'
 
     }
